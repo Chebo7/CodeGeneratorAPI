@@ -7,16 +7,10 @@ include(FetchContent)
 FetchContent_Declare(
     zxing-cpp
     GIT_REPOSITORY https://github.com/zxing-cpp/zxing-cpp.git
-    GIT_TAG master            # можно указать версию
-)
-
-FetchContent_Declare(
-    crow
-    GIT_REPOSITORY https://github.com/CrowCpp/Crow
     GIT_TAG master
 )
 
-FetchContent_MakeAvailable(zxing-cpp crow)
+FetchContent_MakeAvailable(zxing-cpp)
 
-add_executable(server src/main.cpp)
-target_link_libraries(server PRIVATE ZXing::ZXing Crow::Crow)
+add_executable(server src/main.cpp src/QrGenerator.cpp)
+target_link_libraries(server PRIVATE ZXing::ZXing)

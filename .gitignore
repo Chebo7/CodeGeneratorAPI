@@ -213,3 +213,17 @@ build/CMakeFiles/3.31.6/CompilerIdCXX/CMakeCXXCompilerId.cpp
 build/CMakeFiles/server.dir/compiler_depend.internal
 build/CMakeFiles/server.dir/compiler_depend.ts
 build/CMakeFiles/server.dir/link.txt
+build/CMakeFiles/fc-stamp/crow/crow-gitclone-lastrun.txt
+build/CMakeFiles/fc-stamp/crow/crow-gitinfo.txt
+build/CMakeFiles/fc-stamp/crow/crow-patch-info.txt
+build/CMakeFiles/fc-stamp/crow/crow-update-info.txt
+build/CMakeFiles/fc-stamp/crow/download.stamp
+build/CMakeFiles/fc-stamp/crow/patch.stamp
+build/CMakeFiles/fc-stamp/crow/update.stamp
+build/CMakeFiles/fc-stamp/zxing-cpp/download.stamp
+build/CMakeFiles/fc-stamp/zxing-cpp/patch.stamp
+build/CMakeFiles/fc-stamp/zxing-cpp/update.stamp
+build/CMakeFiles/fc-stamp/zxing-cpp/zxing-cpp-gitclone-lastrun.txt
+build/CMakeFiles/fc-stamp/zxing-cpp/zxing-cpp-gitinfo.txt
+build/CMakeFiles/fc-stamp/zxing-cpp/zxing-cpp-patch-info.txt
+build/CMakeFiles/fc-stamp/zxing-cpp/zxing-cpp-update-info.txt
