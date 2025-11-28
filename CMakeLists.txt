@@ -12,5 +12,5 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(zxing-cpp)
 
-add_executable(server src/main.cpp src/QrGenerator.cpp)
+add_executable(server src/main.cpp src/QrGenerator.cpp src/DataMatrixGenerator.cpp)
 target_link_libraries(server PRIVATE ZXing::ZXing)
