@@ -1,3 +1,5 @@
+#include "../include/DataMatrixGenerator.h"
+#include "../include/QrGenerator.h"
 #include "../include/crow_all.h"
 #include <fstream>
 #include <iostream>
@@ -12,37 +14,14 @@
 #include <ZXing/MultiFormatWriter.h>
 #include <utility>
 
-std::string generateQR(const std::string &text, int size = 256,
-                       int margin = 10) {
-
-  ZXing::MultiFormatWriter writer{ZXing::BarcodeFormat::QRCode};
-
-  writer.setMargin(margin);
-  writer.setEncoding(ZXing::CharacterSet::UTF8);
-
-  ZXing::BitMatrix matrix = writer.encode(text, size, size);
-
-  return ToSVG(matrix);
-}
-
-std::string generateDataMatrix(const std::string &text) {
-  ZXing::MultiFormatWriter writer{ZXing::BarcodeFormat::DataMatrix};
-
-  writer.setMargin(10);
-  writer.setEncoding(ZXing::CharacterSet::UTF8);
-
-  ZXing::BitMatrix matrix = writer.encode(text, 256, 256);
-
-  return ZXing::ToSVG(matrix);
-}
-
 int main() {
   crow::SimpleApp app;
+  QrGenerator qr;
+  DataMatrixGenerator dM;
 
-  CROW_ROUTE(app, "/qr")
-  ([](const crow::request &req) {
+  CROW_ROUTE(app, "/qr")([&qr](const crow::request &req) {
     auto text = req.url_params.get("text");
-    std::string data = generateQR(text, 512);
+    std::string data = qr.generate(text, 10, 128);
 
     crow::response resp;
     resp.code = 200;
@@ -52,10 +31,10 @@ int main() {
     return resp;
   });
 
-  CROW_ROUTE(app, "/dataMatrix")([](const crow::request &req) {
+  CROW_ROUTE(app, "/DataMatrix")([&dM](const crow::request &req) {
     auto text = req.url_params.get("text");
 
-    std::string data = generateDataMatrix(text);
+    std::string data = dM.generate(text, 10, 128);
 
     crow::response resp;
     resp.code = 200;

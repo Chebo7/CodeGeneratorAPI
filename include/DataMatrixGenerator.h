@@ -12,9 +12,9 @@
 #include <string>
 #include <utility>
 
-class QrGenerator : public virtual IBarcodeGenerator {
+class DataMatrixGenerator : public virtual IBarcodeGenerator {
 private:
-  ZXing::MultiFormatWriter writer{ZXing::BarcodeFormat::QRCode};
+  ZXing::MultiFormatWriter writer{ZXing::BarcodeFormat::DataMatrix};
 
 public:
   std::string generate(const std::string &text, int margin, int size);
