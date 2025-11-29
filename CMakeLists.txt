@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.30)
 project(CodeGeneratorAPI LANGUAGES CXX)
+file(GLOB SERVER_SOURCES "src/*.cpp")
 set(CMAKE_CXX_STANDARD 17)
 
 include(FetchContent)
@@ -12,5 +13,5 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(zxing-cpp)
 
-add_executable(server src/main.cpp src/QrGenerator.cpp src/DataMatrixGenerator.cpp)
+add_executable(server ${SERVER_SOURCES})
 target_link_libraries(server PRIVATE ZXing::ZXing)
