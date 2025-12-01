@@ -31,7 +31,7 @@ API for generating various matrix codes. Available for generation: UPC-A, UPC-E,
 - [x] Code 93
 - [x] Code 128
 - [x] Codabar
-- ITF
+- [x] ITF
 - [x] QR Code
 - Micro QR Code
 - rMQR Code
