@@ -1,4 +1,5 @@
 ## Statistics:
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/intel-x86-64/CodeGeneratorAPI)
 ![GitHub code size](https://img.shields.io/github/languages/code-size/intel-x86-64/CodeGeneratorAPI)
 ![Last Commit](https://img.shields.io/github/last-commit/intel-x86-64/CodeGeneratorAPI)
 ![GitHub Commits](https://img.shields.io/github/commit-activity/m/intel-x86-64/CodeGeneratorAPI)
