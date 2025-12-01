@@ -29,7 +29,7 @@ API for generating various matrix codes. Available for generation: UPC-A, UPC-E,
 - DX Film Edge
 - [x] Code 39
 - [x] Code 93
-- Code 128
+- [x] Code 128
 - Codabar
 - ITF
 - [x] QR Code
