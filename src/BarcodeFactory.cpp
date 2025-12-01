@@ -13,10 +13,6 @@ BarcodeFactory::create(const std::string type) {
     return std::make_unique<UpcEGenerator>();
   } else if (type == "Itf") {
     return std::make_unique<ItfGenerator>();
-  } else if (type == "DataBar") {
-    return std::make_unique<DataBarGenerator>();
-  } else if (type == "DataBarExpanded") {
-    return std::make_unique<DataBarExpandedGenerator>();
   } else if (type == "Code39") {
     return std::make_unique<Code39Generator>();
   } else if (type == "Code93") {
