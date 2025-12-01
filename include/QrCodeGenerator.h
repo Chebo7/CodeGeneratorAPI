@@ -12,7 +12,7 @@
 #include <string>
 #include <utility>
 
-class QRCodeGenerator : public virtual IBarcodeGenerator {
+class QrCodeGenerator : public virtual IBarcodeGenerator {
 private:
   ZXing::MultiFormatWriter writer{ZXing::BarcodeFormat::QRCode};
 
