@@ -15,6 +15,8 @@ BarcodeFactory::create(const std::string type) {
     return std::make_unique<DataBarGenerator>();
   } else if (type == "DataBarExpanded") {
     return std::make_unique<DataBarExpandedGenerator>();
+  } else if (type == "Code39") {
+    return std::make_unique<Code39Generator>();
   }
 
   return std::make_unique<QrGenerator>();
