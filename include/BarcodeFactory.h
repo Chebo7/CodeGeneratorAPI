@@ -1,5 +1,6 @@
 #pragma once
 
+#include "CodabarGenerator.h"
 #include "Code128Generator.h"
 #include "Code39Generator.h"
 #include "Code93Generator.h"
