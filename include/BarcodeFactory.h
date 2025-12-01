@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Code39Generator.h"
+#include "Code93Generator.h"
 #include "DataBarExpandedGenerator.h"
 #include "DataBarGenerator.h"
 #include "DataMatrixGenerator.h"
