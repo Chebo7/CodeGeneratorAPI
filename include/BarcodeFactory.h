@@ -7,7 +7,7 @@
 #include "DataMatrixGenerator.h"
 #include "IBarcodeGenerator.h"
 #include "ItfGenerator.h"
-#include "QrGenerator.h"
+#include "QRCodeGenerator.h"
 #include "UpcAGenerator.h"
 #include <memory>
 #include <string>

@@ -3,8 +3,8 @@
 
 std::unique_ptr<IBarcodeGenerator>
 BarcodeFactory::create(const std::string type) {
-  if (type == "Qr") {
-    return std::make_unique<QrGenerator>();
+  if (type == "QRCode") {
+    return std::make_unique<QRCodeGenerator>();
   } else if (type == "DataMatrix") {
     return std::make_unique<DataMatrixGenerator>();
   } else if (type == "UPCA") {
@@ -21,5 +21,5 @@ BarcodeFactory::create(const std::string type) {
     return std::make_unique<Code93Generator>();
   }
 
-  return std::make_unique<QrGenerator>();
+  return std::make_unique<QRCodeGenerator>();
 }
