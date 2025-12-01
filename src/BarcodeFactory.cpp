@@ -9,6 +9,8 @@ BarcodeFactory::create(const std::string type) {
     return std::make_unique<DataMatrixGenerator>();
   } else if (type == "UpcA") {
     return std::make_unique<UpcAGenerator>();
+  } else if (type == "UpcE") {
+    return std::make_unique<UpcEGenerator>();
   } else if (type == "Itf") {
     return std::make_unique<ItfGenerator>();
   } else if (type == "DataBar") {
