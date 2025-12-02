@@ -23,6 +23,8 @@ BarcodeFactory::create(const std::string type) {
     return std::make_unique<CodabarGenerator>();
   } else if (type == "Aztec") {
     return std::make_unique<AztecGenerator>();
+  } else if (type == "Pdf417") {
+    return std::make_unique<Pdf417Generator>();
   }
 
   return std::make_unique<QrCodeGenerator>();
