@@ -19,9 +19,9 @@ API for generating various matrix codes. Available for generation: UPC-A, UPC-E,
 <details>
 <summary>Add support for all formats</summary>
 
-- UPC-A
+- [x] UPC-A
 - [x] UPC-E
-- EAN-8
+- [x] EAN-8
 - [x] EAN-13  
 - [x] Code 39
 - [x] Code 93
