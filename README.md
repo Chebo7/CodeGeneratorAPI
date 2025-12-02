@@ -22,7 +22,7 @@ API for generating various matrix codes. Available for generation: UPC-A, UPC-E,
 - UPC-A
 - [x] UPC-E
 - EAN-8
-- EAN-13  
+- [x] EAN-13  
 - [x] Code 39
 - [x] Code 93
 - [x] Code 128
