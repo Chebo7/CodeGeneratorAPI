@@ -10,5 +10,5 @@ private:
 public:
   void start() override;
   void configure(int port) override;
-  crow::SimpleApp getApp();
+  crow::SimpleApp &getApp();
 };

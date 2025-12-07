@@ -1,4 +1,5 @@
 #include "../include/Barcode/BarcodeFactory.h"
+#include "../include/Network/CrowNetworkServer.h"
 #include "../include/Network/crow_all.h"
 #include <ZXing/BarcodeFormat.h>
 #include <ZXing/BitMatrix.h>
@@ -11,9 +12,10 @@
 #include <utility>
 
 int main() {
-  crow::SimpleApp app;
+  CrowNetworkServer server;
+  server.configure(50329);
 
-  CROW_ROUTE(app, "/barcode")([](const crow::request &req) {
+  CROW_ROUTE(server.getApp(), "/barcode")([](const crow::request &req) {
     auto type = req.url_params.get("type");
     auto text = req.url_params.get("text");
     auto margin = req.url_params.get("margin");
@@ -37,6 +39,5 @@ int main() {
 
     return resp;
   });
-
-  app.port(50329).multithreaded().run();
+  server.start();
 }
