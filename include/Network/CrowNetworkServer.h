@@ -1,5 +1,7 @@
 #pragma once
 
+#include "../Barcode/BarcodeFactory.h"
+#include "../Barcode/IBarcodeGenerator.h"
 #include "INetworkServer.h"
 #include "crow_all.h"
 
